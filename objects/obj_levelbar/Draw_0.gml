@@ -21,6 +21,8 @@ switch (global.mode) {
 			) {
 			alarm[1] = round(completion*600)
 			alarm[1] = clamp(alarm[1], 35, 120)
+		} else {
+			image_index = 0;
 		}
 		
 		image_speed = completion < 0.1 ? 0.5 : 0;
