@@ -21,15 +21,13 @@ switch (global.mode) {
 			) {
 			alarm[1] = round(completion*600)
 			alarm[1] = clamp(alarm[1], 35, 120)
-		} else {
-			image_index = 0;
-		}
+		} 
 		
 		image_speed = completion < 0.1 ? 0.5 : 0;
 	
 		/** Watched your stream, red-to-green gradient can be done much easier
 				-- @Onekone#8106 */
-		var c = (image_index == 1) ? c_white : make_color_hsv(clamp(completion,0,1)*85,255,255);
+		var c = (image_index == 1 && completion < 0.1) ? c_white : make_color_hsv(clamp(completion,0,1)*85,255,255);
 												// green on color wheel is 120deg, red is 0.
 												// 120/360*255 = ~85.3
 	break;
