@@ -21,9 +21,9 @@ switch (global.mode) {
 			) {
 			alarm[1] = round(completion*600)
 			alarm[1] = clamp(alarm[1], 35, 120)
+			image_speed = 0.5;
 		} 
-		
-		image_speed = completion < 0.1 ? 0.5 : 0;
+	
 	
 		/** Watched your stream, red-to-green gradient can be done much easier
 				-- @Onekone#8106 */
